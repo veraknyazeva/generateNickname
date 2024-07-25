@@ -20,15 +20,15 @@ public class Main {
         Thread thread = new Thread(() -> {
             for (int i = 0; i < texts.length; i++) {
                 if (texts[i].length() == 3) {
-                    if (isPalindrome(texts[i])) {
+                    if (isPalindrome(texts[i]) && !identicalLetters(texts[i])) {
                         COUNTER_FOR_LENGTH_THREE.getAndIncrement();
                     }
                 } else if (texts[i].length() == 4) {
-                    if (isPalindrome(texts[i])) {
+                    if (isPalindrome(texts[i]) && !identicalLetters(texts[i])) {
                         COUNTER_FOR_LENGTH_FOUR.getAndIncrement();
                     }
                 } else if (texts[i].length() == 5) {
-                    if (isPalindrome(texts[i])) {
+                    if (isPalindrome(texts[i]) && !identicalLetters(texts[i])) {
                         COUNTER_FOR_LENGTH_FIVE.getAndIncrement();
                     }
                 }
